@@ -5,7 +5,8 @@
 <header th:fragment="header(activeTab)">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-        <a class="navbar-brand mr-4" href="#">Task Manager</a>
+         <h2 class="my-second-header" >Task Manager</h2>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
                 aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -51,7 +52,7 @@
                 </li>
                 <li th:class="${activeTab == 'register'}? 'active nav-item mr-4' : 'nav-item mr-4'"
                     sec:authorize="isAuthenticated() and hasRole('ROLE_ADMIN')">
-                    <a class="nav-link" href="/register">Register</a>
+                    <a class="nav-link" href="/register">Add user</a>
                 </li>
                 <li th:class="${activeTab == 'login'}? 'active nav-item mr-4' : 'nav-item mr-4'"
                     sec:authorize="!isAuthenticated()">

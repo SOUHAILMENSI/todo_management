@@ -11,6 +11,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.Objects;
 
 @Entity
+@Table
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

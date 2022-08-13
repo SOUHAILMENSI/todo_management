@@ -1,5 +1,6 @@
 package pl.rengreen.taskmanager.controller;
 
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -35,11 +36,12 @@ public class RegisterController {
 
         if (userService.isUserEmailPresent(user.getEmail())) {
             model.addAttribute("exist", true);
-            return "register";
+            return "forms/register";
         }
 
         userService.createUser(user);
-        return "views/success";
+        model.addAttribute("success", true);
+        return "forms/register";
     }
 
 }

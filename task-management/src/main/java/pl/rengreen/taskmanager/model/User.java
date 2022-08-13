@@ -10,6 +10,7 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Entity
+@Table
 public class User {
 
     @Id

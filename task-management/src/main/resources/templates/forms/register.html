@@ -4,7 +4,7 @@
       lang="en">
 <head>
     <!--/*/ <th:block th:include="fragments/head :: head"></th:block> /*/-->
-    <title>Register</title>
+    <title>Add user</title>
 </head>
 
 <body>
@@ -14,17 +14,22 @@
 </header>
 
 <main class="container">
+
     <div class="card mb-3">
 
         <h1 class="my-highest-header card-header">Register new User Account</h1>
 
         <div class="card card-body">
-            <div class="alert alert-info" th:if="${exist}">
+            <div class="alert alert-danger" th:if="${exist}">
                 <p class="text text-center">
                     User with this email exists
                 </p>
             </div>
-
+			<div class="alert alert-success" th:if="${success}">
+                <p class="text text-center">
+					User added successfully
+			    </p>
+            </div>
             <form th:action="@{/register}" th:object="${user}" method="post">
                 <div class="row">
 

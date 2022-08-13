@@ -2,9 +2,10 @@ package pl.rengreen.taskmanager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class TaskManagerApplication {
+public class TaskManagerApplication extends SpringBootServletInitializer{
 
     public static void main(String[] args) {
         SpringApplication.run(TaskManagerApplication.class, args);

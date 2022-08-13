@@ -31,6 +31,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
         bean.setValidationMessageSource(messageSource());
         return bean;
     }
+ 
 
     @Override
     public Validator getValidator() {
